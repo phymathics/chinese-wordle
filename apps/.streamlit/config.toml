@@ -1,0 +1,77 @@
+[server]
+port = 59290
+headless = true
+runOnSave = true
+# Change the type of file watcher used by Streamlit, or turn it off completely.
+# Allowed values:
+# * "auto" : Streamlit will attempt to use the watchdog module, and falls back to polling if watchdog is not available.
+# * "watchdog" : Force Streamlit to use the watchdog module.
+# * "poll": Force Streamlit to always use polling. * "none" : Streamlit will not watch files.
+# Default: "auto"
+fileWatcherType = "watchdog"
+
+# Max size, in megabytes, for files uploaded with the file_uploader.
+# Default: 200
+maxUploadSize = 350
+
+enableWebsocketCompression = true
+
+
+[browser]
+serverAddress = "localhost"
+
+
+[logger]
+
+# Level of logging: 'error', 'warning', 'info', or 'debug'.
+# Default: 'info'
+level = "info"
+
+# String format for logging messages.
+# If logger.datetimeFormat is set, logger messages will default to `%(asctime)s.%(msecs)03d %(message)s`.
+# Default: None
+messageFormat = "%(asctime)s %(message)s"
+
+
+[client]
+
+# Whether to enable st.cache.
+# Default: true
+caching = true
+
+# If false, makes your Streamlit script not draw to a Streamlit app.
+# Default: true
+displayEnabled = true
+
+# Controls whether uncaught app exceptions are displayed in the browser. By default, this is set to True and Streamlit displays app exceptions and associated tracebacks in the browser.
+# If set to False, an exception will result in a generic message being shown in the browser, and exceptions and tracebacks will be printed to the console only.
+# Default: true
+showErrorDetails = true
+
+
+[runner]
+
+# Allows you to type a variable or string by itself in a single line of Python code to write it to the app.
+# Default: true
+magicEnabled = true
+
+# Install a Python tracer to allow you to stop or pause your script at any point and introspect it. As a side-effect, this slows down your script's execution.
+# Default: false
+installTracer = false
+
+# Sets the MPLBACKEND environment variable to Agg inside Streamlit to prevent Python crashing.
+# Default: true
+fixMatplotlib = true
+
+# Run the Python Garbage Collector after each script execution. This can help avoid excess memory use in Streamlit apps, but could introduce delay in rerunning the app script for high-memory-use applications.
+# Default: true
+postScriptGC = true
+
+
+[theme]
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#262730"
+font="sans serif"
+
